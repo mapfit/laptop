@@ -1,0 +1,45 @@
+!/bin/sh
+
+# Mapfit
+brew bundle --file=- <<EOF
+# Mapfit Core Applications
+brew cask install "1password"
+brew cask install "appcleaner"
+brew cask install "dropbox"
+brew cask install "google-chrome"
+brew cask install "intellij-idea"
+brew cask install "sketch"
+brew cask install "slack"
+brew cask install "skype"
+brew cask install "qgis"
+brew cask install "zeplin"
+# Mapfit Productivity Applications
+brew cask install "alfred"
+brew cask install "bartender"
+brew cask install "bettertouchtool"
+brew cask install "caffeine"
+brew cask install "evernote"
+brew cask install "fantastical"
+brew cask install "flux"
+brew cask install "insync"
+brew cask install "microsoft-office"
+brew cask install "skitch"
+brew cask install "sketch-toolbox"
+brew cask install "spotify"
+brew cask install "spark"
+brew cask install "textexpander"
+# Mapfit Development Applications
+brew cask install "atom"
+brew cask install "awscli"
+brew cask install "cyberduck"
+brew cask install "github-desktop"
+brew cask install "postico"
+brew cask install "sourcetree"
+brew cask install "sublime-text"
+brew cask install "unrar"
+brew cask install "wget"
+EOF
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
